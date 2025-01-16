@@ -15,13 +15,17 @@
 然后用 [github.com/sindresorhus/github-markdown-css]() 来提供默认样式。
 
 然后用这个代码来确保一个基本的分页行为：
+
 ```css
 h2 {
   page-break-before: always;
 }
 ```
+
 只要遇到h2元素，就会令起一页。
 
 接着就是最关键的 [https://pagedjs.org]() 这个库了，它可以在网页上提供实时的预览功能。
 这里的关键时配合 [interface.css](https://gitlab.coko.foundation/pagedjs/interface-polyfill)，它能美化预览界面（默认是双屏的，打开里头的一些注释，就可以单屏预览了），这些预览在打印的时候并不会生效。（这里是利用 `@media screen` 来写样式）
+
+另外，图片压缩是有必要的，这里用浏览器的canvas来对图片进行所需大小的导出即可，在 paged.js 加载之前，配置好全局的 PagedConfig 对象，可以放置一些生命周期的钩子函数。
 

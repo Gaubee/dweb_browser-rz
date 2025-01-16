@@ -32,6 +32,7 @@ h1 {
 
 h2 {
   page-break-before: always;
+  string-set: heading content();
 }
 li {
   border: 1px dashed #9e9e9e24;
@@ -48,6 +49,10 @@ body > ol > li {
   margin: 1cm 1cm;
   @top-left {
     content: "《自由穿梭》软件说明书";
+    font-size: 12px;
+  }
+  @top-right {
+    content: string(heading, first);
     font-size: 12px;
   }
   @bottom-center {
