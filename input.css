@@ -1,20 +1,44 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+:root {
+  font-family: var(
+    --default-mono-font-family,
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Liberation Mono",
+    "Courier New",
+    monospace
+  );
+}
 body {
-  width: 21.59cm; /* Word页面宽度 */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 14px;
+  font-size: 12px;
 }
 pre {
-  contain: layout style paint;
+  /* contain: layout style paint; */
 }
 .file-name {
   border-left: 10px solid #358ccb;
   font-size: 22px;
-  padding-left: 16px;
+  padding-left: 14px;
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+}
+
+@page {
+  margin: 1cm 1cm;
+  size: A4 portrait;
+  @top-left {
+    content: "自由穿梭软件 示例代码";
+    font-size: 12px;
+  }
+  @bottom-right {
+    content: counter(page) " / " counter(pages);
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    font-size: 12px;
+  }
 }

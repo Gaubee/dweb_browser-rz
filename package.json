@@ -3,16 +3,19 @@
     "type": "module",
     "scripts": {
         "g1": "node gen.ts",
-        "g2": "node gen2.ts"
+        "css1": "tailwindcss --input input.css --output output.css",
+        "g2": "node gen2.ts",
+        "css2": "tailwindcss --input input2.css --output output2.css"
     },
     "dependencies": {
         "@gaubee/nodekit": "^0.4.1",
-        "@types/markdown-pdf": "^9.0.5",
-        "html-docx-js": "^0.3.1",
-        "html-to-docx": "^1.8.0",
-        "markdown-pdf": "^11.0.0",
-        "mdpdf": "^3.0.4",
+        "@tailwindcss/vite": "^4.0.6",
+        "pagedjs": "^0.4.3",
+        "shiki": "^2.3.2",
         "showdown": "^2.1.0",
-        "tailwindcss": "^3.4.17"
+        "tailwindcss": "^4.0.6"
+    },
+    "devDependencies": {
+        "vite": "^6.1.0"
     }
 }

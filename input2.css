@@ -48,7 +48,7 @@ body > ol > li {
   /* set page margins */
   margin: 1cm 1cm;
   @top-left {
-    content: "《自由穿梭》软件说明书";
+    content: "自由穿梭软件 说明书";
     font-size: 12px;
   }
   @top-right {
@@ -66,6 +66,7 @@ body > ol > li {
 }
 @page :first {
   @top-left {
-    content: ""; /* 禁用第一页的页眉 */
+    /* 禁用第一页的页眉 */
+    /* content: ""; */
   }
 }
